@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alok Hibare | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+<header>
+        <div class="container"> <a href="#" class="logo">ALOK</a>
 
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">ALOK</a>
-            <div class="nav-links">
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav-links">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#projects">Work</a>
                 <a href="#contact">Contact</a>
-            </div>
+            </nav>
         </div>
-    </nav>
+</header>
 
     <section class="hero">
         <div class="container">
             <h1 class="animate">Building <span>Digital</span><br>Elegance.</h1>
-            <p class="animate delay-1">I am Alok Hibare, a developer focused on crafting clean code and pastel-perfect
-                user experiences.</p>
+            <p class="animate delay-1">I am Alok Hibare, a developer focused on crafting clean code and pastel-perfect user experiences.</p>
             <div class="animate delay-2">
                 <a href="#projects" class="btn">View Projects</a>
             </div>
@@ -38,24 +40,20 @@
 
     <section id="about">
         <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">About Me</h2>
-        <div class="service-card lavender">
-
-            <p class="animate delay-1">
-                I am Alok Hibare, a passionate HTML and CSS Developer with a focus on creating efficient, scalable, and
-                user-friendly web sites. My journey began with a curiosity for how digital products work, evolving into
-                a dedication to mastering modern web technologies.
-            </p>
-            <br>
-            <p class="animate delay-2">
-                I specialize in leveraging frameworks like React and Node.js to build comprehensive solutions, from
-                front-end user experiences to robust back-end APIs. I thrive in challenging environments and constantly
-                seek new ways to improve my craft and deliver measurable value.
-            </p>
-            <br>
-            <p align="center" class="animate delay-3"
-                class="text-sm italic text-pastel-dark/80 pt-4 border-t border-pastel-dark/10">
-                "My goal is to translate complex problems into elegant, functional code."
-            </p>
+        <div class="container">
+            <div class="service-card lavender">
+                <p class="animate delay-1">
+                    I am Alok Hibare, a passionate HTML and CSS Developer with a focus on creating efficient, scalable, and user-friendly web sites.
+                </p>
+                <br>
+                <p class="animate delay-2">
+                    I specialize in leveraging frameworks like React and Node.js to build comprehensive solutions.
+                </p>
+                <br>
+                <p align="center" class="animate delay-3">
+                    "My goal is to translate complex problems into elegant, functional code."
+                </p>
+            </div>
         </div>
     </section>
 
@@ -64,14 +62,12 @@
             <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 4rem;">Selected Works</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <iframe src="https://alokhibare.github.io/Myntra/" frameborder="0" width="100%"
-                        height="400px"></iframe>
+                    <iframe src="https://alokhibare.github.io/Myntra/" frameborder="0"></iframe>
                     <h3>E-Commerce App</h3>
                     <p style="opacity: 0.6;">A clone of Myntra Shopping Website.</p>
                 </div>
                 <div class="project-card">
-                    <iframe src="https://alokhibare.github.io/The-Daily-Grind/" frameborder="0" width="100%"
-                        height="400px"></iframe>
+                    <iframe src="https://alokhibare.github.io/The-Daily-Grind/" frameborder="0"></iframe>
                     <h3>The Daily Grind</h3>
                     <p style="opacity: 0.6;">Cafe website.</p>
                 </div>
@@ -91,10 +87,10 @@
                     <h4>Frontend</h4>
                     <p>Responsive web sites built with precision.</p>
                 </div>
-
             </div>
         </div>
     </section>
+
     <section id="contact">
         <div class="container">
             <div class="contact-box">
@@ -105,27 +101,36 @@
                         <input type="email" placeholder="Email" class="form-input">
                     </div>
                     <textarea placeholder="Message" rows="5" class="form-input"></textarea>
-
-                    <a href="#popup" type="submit" class="btn btn-submit">Send Message</a>
+                    <a href="index.html#popup" class="btn btn-submit">Send Message</a>
                     <hr>
-                    </center>
-                    <div id="popup" class="popup">
-                        <div class="popup-content">
-                            <h1>Your response has been received!</h1>
-
-                            <button id="close" type="close">close</button>
-                        </div>
-                    </div>
+                </form>    
+            </div>
+        </div>
     </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h1>Your response has been received!</h1>
+            <a href="index.html" class="btn btn-close">Close</a>
+        </div>
+    </div>
 
     <footer>
         &copy; 2025 Alok Hibare | All Rights Reserved.
     </footer>
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <h1>Enter your Details</h1>
-        </div>
-    </div>
-</body>
 
+    <script>
+    // Select the checkbox and all navigation links
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    // Add a click event to each link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Uncheck the box to close the menu
+            menuToggle.checked = false;
+        });
+    });
+</script>
+</body>
 </html>
