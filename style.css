@@ -442,3 +442,39 @@ footer {
     opacity: 0.4;
     text-transform: uppercase;
 }
+/* --- SOCIAL LINKS --- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    font-size: 4rem;
+    color: var(--accent); /* Using your pinkish accent color */
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+/* Hover Animation: Scale up and glow */
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.2);
+    color: var(--pastel-hover);
+    filter: drop-shadow(0 0 8px var(--accent));
+}
+
+/* Optional: Gentle floating animation to match your cards */
+.social-icon {
+    animation: socialFloat 3s ease-in-out infinite;
+}
+
+.social-icon:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes socialFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}

@@ -6,6 +6,7 @@
     <title>Alok Hibare | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 <header>
@@ -101,7 +102,7 @@
                         <input type="email" placeholder="Email" class="form-input">
                     </div>
                     <textarea placeholder="Message" rows="5" class="form-input"></textarea>
-                    <a href="index.html#popup" class="btn btn-submit">Send Message</a>
+                    <a href="#popup" class="btn btn-submit">Send Message</a>
                     <hr>
                 </form>    
             </div>
@@ -111,13 +112,21 @@
     <div id="popup" class="popup">
         <div class="popup-content">
             <h1>Your response has been received!</h1>
-            <a href="index.html" class="btn btn-close">Close</a>
+            <a href="index.html" class="btn btn-close" onclick="closePopup()">Close</a>
         </div>
     </div>
 
     <footer>
-        &copy; 2025 Alok Hibare | All Rights Reserved.
-    </footer>
+    <div class="social-links">
+        <a href="https://github.com/alokhibare" target="_blank" class="social-icon">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/alok-hibare-330722285/" target="_blank" class="social-icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+    </div>
+    <p>&copy; 2025 Alok Hibare | All Rights Reserved.</p>
+</footer>
 
     <script>
     // Select the checkbox and all navigation links
